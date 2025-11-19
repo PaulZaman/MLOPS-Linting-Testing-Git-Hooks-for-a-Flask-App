@@ -5,6 +5,13 @@ app = Flask(__name__)
 # In-memory database
 items = []
 
+
+def add_item_to_list(item_list, item):
+    """Pure function used for unit testing."""
+    if item:
+        item_list.append(item)
+    return item_list
+
 @app.route('/')
 def index():
     return render_template('index.html', items=items)
@@ -12,8 +19,7 @@ def index():
 @app.route('/add', methods=['POST'])
 def add_item():
     item = request.form.get('item')
-    if item:
-        items.append(item)
+    add_item_to_list(items, item)
     return redirect(url_for('index'))
 
 @app.route('/delete/<int:index>')
