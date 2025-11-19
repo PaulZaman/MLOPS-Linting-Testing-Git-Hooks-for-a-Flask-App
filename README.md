@@ -31,3 +31,18 @@ The push is blocked if either step fails.
 A GitHub Actions workflow (`.github/workflows/ci.yml`) was added.  
 It runs Ruff and Pytest automatically for pull requests targeting the `dev` branch.  
 The PR fails if linting or tests fail.
+
+
+## Images
+
+### Local Git Hook
+![Local Git Hook](images/local-git-hook.png)
+
+### GitHub CI (success)
+![GitHub CI Success](images/github-ci-success.png)
+
+### GitHub CI (failure)
+![GitHub CI Failure](images/github-ci-failure.png)
+
+### Github Actions
+![GitHub Actions](images/github-actions.png)
