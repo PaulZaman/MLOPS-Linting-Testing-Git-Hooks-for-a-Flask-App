@@ -1,7 +1,10 @@
-import os, sys
+import os
+import sys
+
 sys.path.append(os.path.dirname(os.path.dirname(__file__)))  # add project root
 
 from app import add_item_to_list
+
 
 def test_add_item_to_list_adds_non_empty_string():
     data = []
